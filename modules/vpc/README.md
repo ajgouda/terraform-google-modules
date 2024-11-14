@@ -8,7 +8,7 @@ Basic usage of this submodule is as follows:
 
 ```hcl
 module "vpc" {
-    source  = "https://github.com/ajgouda/terraform-google-network/tree/main/modules/vpc"
+    source  = "source = "github.com/ajgouda/terraform-google-network//modules/vpc?ref=main"
     
     project_id   = "<PROJECT ID>"
     network_name = "example-vpc"

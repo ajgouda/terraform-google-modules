@@ -8,7 +8,7 @@ Basic usage of this submodule is as follows:
 
 ```hcl
 module "subnets" {
-    source  = "source = "github.com/ajgouda/terraform-google-network//modules/subnets?ref=main"
+    source       = "github.com/ajgouda/terraform-google-network//modules/subnets?ref=main"
 
     project_id   = "<PROJECT ID>"
     network_name = "example-vpc"

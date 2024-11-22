@@ -7,6 +7,7 @@ locals {
 
 
 resource "google_compute_firewall" "rules_ingress_egress" {
+<<<<<<< HEAD
   for_each           = local.rules_all
   name               = each.value.name
   direction          = each.value.direction
@@ -14,6 +15,15 @@ resource "google_compute_firewall" "rules_ingress_egress" {
   project            = var.project_id
   source_ranges      = lookup(each.value, "source_ranges", null)
   destination_ranges = lookup(each.value, "destination_ranges", null)
+=======
+  for_each                = local.rules_all
+  name                    = each.value.name
+  direction               = each.value.direction
+  network                 = var.network_name
+  project                 = var.project_id
+  source_ranges           = lookup(each.value, "source_ranges", null)
+  destination_ranges      = lookup(each.value, "destination_ranges", null)
+>>>>>>> fd56e60e97daa4093e56cd938366a1c53bf26829
 
 
   dynamic "allow" {
